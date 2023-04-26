@@ -1,6 +1,3 @@
-Here is a JavaScript solution for finding the longest palindromic substring in a given string:
-
-```javascript
 function longestPalindromicSubstring(string) {
     let start = 0;
     let end = 0;
@@ -15,18 +12,3 @@ function longestPalindromicSubstring(string) {
     }
     return string.substring(start, end + 1);
 }
-
-function expandAroundCenter(string, left, right) {
-    let L = left, R = right;
-    while (L >= 0 && R < string.length && string.charAt(L) === string.charAt(R)) {
-        L--;
-        R++;
-    }
-    return R - L - 1;
-}
-
-console.log(longestPalindromicSubstring("babad")); // Output: "bab"
-console.log(longestPalindromicSubstring("cbbd")); // Output: "bb"
-```
-
-This console application can be run in a Node.js environment or any JavaScript console. It will print the longest palindromic substring of the input string.
